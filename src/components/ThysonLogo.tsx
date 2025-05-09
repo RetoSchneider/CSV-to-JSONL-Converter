@@ -16,7 +16,16 @@ const ThysonLogo: React.FC<ThysonLogoProps> = ({ size = 24 }) => {
         xmlns="http://www.w3.org/2000/svg"
       >
         <rect x="0" y="0" width="120" height="24" rx="4" fill="#16162A" />
-        <rect x="1" y="1" width="118" height="22" rx="3" stroke="#FFCC00" strokeWidth="1" fill="none" />
+        <rect
+          x="1"
+          y="1"
+          width="118"
+          height="22"
+          rx="3"
+          stroke="#FFCC00"
+          strokeWidth="1"
+          fill="none"
+        />
         <text
           x="60"
           y="16"

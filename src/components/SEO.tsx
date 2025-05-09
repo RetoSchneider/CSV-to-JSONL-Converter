@@ -17,7 +17,7 @@ const SEO = ({
 }: SEOProps) => {
   useEffect(() => {
     document.title = title;
-    
+
     let metaDescription = document.querySelector('meta[name="description"]');
     if (!metaDescription) {
       metaDescription = document.createElement('meta');
@@ -25,7 +25,7 @@ const SEO = ({
       document.head.appendChild(metaDescription);
     }
     metaDescription.setAttribute('content', description);
-    
+
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     if (!canonicalLink) {
       canonicalLink = document.createElement('link');
@@ -33,7 +33,7 @@ const SEO = ({
       document.head.appendChild(canonicalLink);
     }
     canonicalLink.setAttribute('href', canonical);
-    
+
     additionalMetaTags.forEach(tag => {
       let metaTag = document.querySelector(`meta[name="${tag.name}"]`);
       if (!metaTag) {
@@ -43,7 +43,7 @@ const SEO = ({
       }
       metaTag.setAttribute('content', tag.content);
     });
-    
+
     additionalLinkTags.forEach(tag => {
       let linkTag = document.querySelector(`link[rel="${tag.rel}"]`);
       if (!linkTag) {
@@ -53,11 +53,10 @@ const SEO = ({
       }
       linkTag.setAttribute('href', tag.href);
     });
-    
-    return () => {
-    };
+
+    return () => {};
   }, [title, description, canonical, additionalMetaTags, additionalLinkTags]);
-  
+
   return null;
 };
 

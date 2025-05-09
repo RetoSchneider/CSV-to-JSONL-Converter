@@ -15,7 +15,7 @@ const BackgroundMusic = ({ audioSrc, initialMuted = true }: BackgroundMusicProps
     if (audioRef.current) {
       audioRef.current.volume = 0.3;
       audioRef.current.loop = true;
-     
+
       const playAttempt = audioRef.current.play();
       if (playAttempt !== undefined) {
         playAttempt
@@ -26,7 +26,7 @@ const BackgroundMusic = ({ audioSrc, initialMuted = true }: BackgroundMusicProps
             }
           })
           .catch(error => {
-            console.log("Autoplay prevented:", error);
+            console.log('Autoplay prevented:', error);
             setIsPlaying(false);
           });
       }
@@ -45,11 +45,12 @@ const BackgroundMusic = ({ audioSrc, initialMuted = true }: BackgroundMusicProps
       const newMutedState = !isMuted;
       audioRef.current.muted = newMutedState;
       setIsMuted(newMutedState);
-      
+
       if (!newMutedState && !isPlaying) {
-        audioRef.current.play()
+        audioRef.current
+          .play()
           .then(() => setIsPlaying(true))
-          .catch(error => console.log("Play prevented:", error));
+          .catch(error => console.log('Play prevented:', error));
       }
     }
   };
@@ -57,7 +58,7 @@ const BackgroundMusic = ({ audioSrc, initialMuted = true }: BackgroundMusicProps
   return (
     <div className="retro-music-controls">
       <audio ref={audioRef} src={audioSrc} preload="auto" />
-      <div 
+      <div
         className={`retro-visualizer ${!isMuted && isPlaying ? 'active' : ''}`}
         aria-hidden="true"
       >
@@ -69,11 +70,11 @@ const BackgroundMusic = ({ audioSrc, initialMuted = true }: BackgroundMusicProps
         <div className="visualizer-bar"></div>
         <div className="visualizer-bar"></div>
       </div>
-      <button 
+      <button
         onClick={toggleMute}
         className="retro-music-button"
-        aria-label={isMuted ? "Unmute background music" : "Mute background music"}
-        title={isMuted ? "Unmute background music" : "Mute background music"}
+        aria-label={isMuted ? 'Unmute background music' : 'Mute background music'}
+        title={isMuted ? 'Unmute background music' : 'Mute background music'}
       >
         <span role="img" aria-hidden="true">
           {isMuted ? '🔇' : '🔊'}
