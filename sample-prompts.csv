@@ -1,0 +1,6 @@
+name,age,occupation,skills,years_experience
+"John Smith",32,"Software Engineer","JavaScript, React, Node.js",8
+"Alice Johnson",28,"Data Scientist","Python, TensorFlow, SQL",5
+"Bob Williams",45,"Product Manager","Agile, Jira, User Research",15
+"Emma Davis",31,"UX Designer","Figma, Adobe XD, User Testing",7
+"Michael Brown",39,"DevOps Engineer","Docker, Kubernetes, AWS",10
