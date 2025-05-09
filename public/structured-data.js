@@ -5,6 +5,7 @@ const structuredData = {
   "applicationCategory": "UtilityApplication",
   "operatingSystem": "Any",
   "isAccessibleForFree": true,
+  "url": "https://csv-to-jsonl-converter.vercel.app/",
   "description": "Convert CSV files to OpenAI-ready JSONL format with instant token counting. 100% in-browser processing with no data storage.",
   "aggregateRating": {
     "@type": "AggregateRating",
@@ -14,7 +15,6 @@ const structuredData = {
   "featureList": "Drag-and-drop CSV to download an OpenAI-ready JSONL file, Shows total tokens per dataset, Pay-what-you-want pricing, 100% in-browser with no backend storage"
 };
 
-// Insert this into the page
 document.addEventListener('DOMContentLoaded', () => {
   const script = document.createElement('script');
   script.type = 'application/ld+json';

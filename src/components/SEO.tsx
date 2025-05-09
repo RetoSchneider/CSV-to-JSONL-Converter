@@ -11,7 +11,7 @@ interface SEOProps {
 const SEO = ({
   title = 'CSV to JSONL Converter | OpenAI-Ready File Formatter with Token Counter',
   description = 'Convert CSV files to OpenAI-ready JSONL format with instant token counting. 100% in-browser processing with no data storage.',
-  canonical = 'https://csv2jsonl.ai',
+  canonical = 'https://csv-to-jsonl-converter.vercel.app/',
   additionalMetaTags = [],
   additionalLinkTags = [],
 }: SEOProps) => {

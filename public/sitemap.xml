@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://csv2jsonl.ai/</loc>
-    <lastmod>2025-05-06</lastmod>
+    <loc>https://csv-to-jsonl-converter.vercel.app/</loc>
+    <lastmod>2025-05-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
